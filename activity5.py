@@ -1,6 +1,6 @@
-def twenty_or_more(CROSSWD.txt):
+def twenty_or_more(file):
     long_words = []                        
-    with open(CROSSWD.txt, 'r') as f:             
+    with open(file, 'r') as f:             
         for line in f:                     
             words = line.split()           
             for word in words:
@@ -26,9 +26,9 @@ def uses_only(word, letters):
 
 
 
-def all_uses_only(CROSSWD.txt, letters):
+def all_uses_only(file, letters):
     valid_words = []
-    with open(CROSSWD.txt, 'r') as f:
+    with open(file, 'r') as f:
         for line in f:
             words = line.split()
             for word in words:
