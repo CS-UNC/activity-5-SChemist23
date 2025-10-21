@@ -26,9 +26,9 @@ def uses_only(word, letters):
 
 
 
-def all_uses_only(file, letters):
+def all_uses_only(CROSSWD.txt, letters):
     valid_words = []
-    with open(file, 'r') as f:
+    with open(CROSSWD.txt, 'r') as f:
         for line in f:
             words = line.split()
             for word in words:
