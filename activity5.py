@@ -1,6 +1,7 @@
 def more_than_20(file):
     words = []    
     data = open(file, 'r') 
+    ##another way to do it
     #for word in data:
         #if len(word.strip()) > 20:
             #words.append(word.strip())
