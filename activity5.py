@@ -1,13 +1,3 @@
-
-
-
-
-for line in words_file:
-    print(line.strip())
-
-
-
-
 def more_than_20(file):
     words = []    
     data = open(file, 'r') 
