@@ -1,37 +1,41 @@
-def twenty_or_more(file):
-    long_words = []                        
-    with open(file, 'r') as f:             
-        for line in f:                     
-            words = line.split()           
-            for word in words:
-                if len(word) > 20:         
-                    long_words.append(word)  
-    return long_words
 
+
+
+
+
+
+
+
+
+def more_than_20(file):
+    words = []    
+    data = open(file, 'r') 
+    for word in data:
+        if len(word.strip()) > 20:
+            words.append(word.strip())
+    words = [x.strip() for x in data if len (x.strip()) > 20]
+    return words
+
+print(more_than_20("CROSSWD.txt"))
 
 
 def has_no_e(word):
-    for letter in word:
-        if letter == 'e' or letter == 'E':
-            return False
-    return True
-
-
-
+    if 'e' in word:
+        return False
+    else:
+        return True
+    
 def uses_only(word, letters):
-    for letter in word:
-        if letter not in letters:
+    for x in word:
+        if x not in letters:
             return False
     return True
 
-
-
-def all_uses_only(file, letters):
-    valid_words = []
-    with open(file, 'r') as f:
-        for line in f:
-            words = line.split()
-            for word in words:
-                if uses_only(words, letters):    
-                    valid_words.append(word)
-    return valid_words
+def all_uses_only(file,letters):
+    result = []
+    x = open(file, 'r')
+    for line in x:
+        word = line.strip()
+        if uses_only(word, letters):
+            result.append(word)
+    return result
