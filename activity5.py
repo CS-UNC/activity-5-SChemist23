@@ -2,7 +2,8 @@
 
 
 
-
+for line in words_file:
+    print(line.strip())
 
 
 
